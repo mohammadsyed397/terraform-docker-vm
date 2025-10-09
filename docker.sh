@@ -36,11 +36,11 @@
 
 # kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-1.43"
 
-sudo curl -fsSL -o /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-sudo yum upgrade
+ curl -fsSL -o /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+ yum upgrade
 # Add required dependencies for the jenkins package
-sudo yum install fontconfig java-21-openjdk jenkins -y 
-sudo systemctl daemon-reload
-sudo systemctl enable jenkins
-sudo systemctl start jenkins
+ yum install fontconfig java-21-openjdk jenkins -y 
+ systemctl daemon-reload
+ systemctl enable jenkins
+ systemctl start jenkins
